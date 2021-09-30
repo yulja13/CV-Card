@@ -1,0 +1,242 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    font-size: 15px;
+    background-color: #161616;
+}
+
+.resume {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 75px 73px;
+    max-width: 1680px;
+    max-height: 850px;
+}
+
+.resume__column {
+    padding: 15px;
+    flex: 0 1 30%;
+}
+
+.resume__title {
+    font-weight: 600;
+    /* font-size: 75px; */
+    font-size: calc(24px + 51 * (100vw / 1980));
+}
+
+.info__inner {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+
+}
+
+.info__item {
+    margin-bottom: 35px;
+    padding-right: 15px;
+    flex: 0 1 50%
+}
+
+.header {
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0.9;
+}
+
+.resume__header {
+    margin-bottom: 25px;
+}
+
+.info__item-name {
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.info__item-text {
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;   
+}
+
+.progress-bar__line {
+    width: 100%;
+    height: 7px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 17px;
+}
+
+.progress-bar__line::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 7px;
+    background-color: #FFFFFF;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.progress-bar__line_media::after {
+    width: 25%;
+}
+
+.resume__content {
+    font-weight: 500;   
+    line-height: 25px;
+    opacity: 0.8;
+    margin-bottom: 45px;
+}
+
+.resume__section:last-child .resume__content{
+    margin-bottom: 0;
+}
+
+.resume__list {
+    padding-left: 20px;
+}
+
+.resume__foto-img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.container {
+    position: relative;
+}
+
+.resume__foto-quote {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    position: absolute;
+    bottom: 83px;
+    left: 35px;
+    width: 75%;
+}
+
+blockquote p::before {
+    content: open-quote;
+}
+
+blockquote p::after {
+    content: close-quote;
+}
+
+@media (min-width: 1200px) and (max-width: 1670px) {
+    .resume__row {
+        flex-wrap: wrap;
+    }
+
+    .first {
+        order: 1;
+        flex: 1 1 auto;
+
+    }
+    .second {
+        order: 3;
+        flex: 1 1 auto;
+    }
+    .thrid {
+        order: 2;
+        flex: 0 0 450px;
+    }
+    }
+
+    @media  (max-width: 1200px) {
+        .resume__row {
+            flex-wrap: wrap;
+            padding: 10px 20px;
+        }
+        .first {
+            order: 1;
+            flex: 1 1 50%;
+        }
+        .second {
+            order: 3;
+            flex: 1 1 50%;
+
+        }
+        .thrid {
+            order: 2;
+            flex: 1 1 50%;
+        }
+        .resume__foto-quote {
+            font-size: 30px;
+            line-height: 30px;
+            width: 50%;
+        }
+        }
+
+        @media  (max-width: 830px)  {
+            .info__inner {
+                margin-top: 25px;
+                margin-bottom: 0;
+            }
+
+            .resume__header {
+                margin-bottom: 10px;
+            }
+        }
+        @media  (max-width: 576px) {
+            .info__inner {
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+
+            .resume__foto-quote {
+                font-size: 25px;
+                line-height: 27px;
+                bottom: 30px;
+                left: 30px;
+                width: 75%;
+            }
+            .resume__header {
+                margin-bottom: 10px;
+            }
+
+            .resume__content {
+                margin-bottom: 25px;
+            }
+
+
+            .first {
+                order: 1;
+                flex: 1 1 auto;
+            }
+            .second {
+                order: 3;
+                flex: 1 1 auto;
+    
+            }
+            .thrid {
+                order: 2;
+                flex: 0 0 100%;
+            }
+        }
